@@ -19,7 +19,7 @@ bottoneCerca.addEventListener("click",
 
     //controllo
     for ( var i = 0; i < listMail.length; i++){
-      var item = listMail[i]
+      var item = listMail[i];
 
       if (yourMail == item){
         boolean = true;
@@ -31,23 +31,19 @@ bottoneCerca.addEventListener("click",
       //email trovata
       document.getElementById("check").innerHTML = "L'utente " + yourMail + " è stato trovato";
       console.log("L'utente " + yourMail + " è stato trovato");
-      bottoneCerca.className = "hidden"
+      bottoneCerca.className = "hidden";
+      play.className = "show";
+      
     } else {
       //email non trovata
       document.getElementById("check").innerHTML = "Attenzione l'utente " + yourMail + " non è stato trovato";
       console.log("Attenzione l'utente " + yourMail + " non è stato trovato, reinserisci l'email");
     };
 
-    check.className = "show"
-    play.className = "show"
+    check.className = "show";
+    
   }
 )
-
-
-
-
-
-
 
 
 /** 
@@ -83,15 +79,18 @@ bottoneGioca.addEventListener("click",
   //stampa un messaggio
   if (boolean == true){
     //email trovata
-    email.className = "hidden"
+    email.className = "hidden";
   } else {
     //email non trovata
-    alert("Per giocare devi inserire l'indirizzo email")
+    alert("Per giocare devi inserire e cercare l'indirizzo email");
   };
+  dadi.className = "show";
+  }
+)
 
-  
-  
-
+bottoneAnnulla.addEventListener("click",
+  function(){
+    window.location.reload(); 
   }
 )
 
