@@ -61,57 +61,41 @@ var diceComputer;
 
 bottoneGioca.addEventListener("click",
   function(){
-    //Genero numero random da 1 a 6
+
+  //Genero numero random da 1 a 6
   mioNumero = Math.floor( Math.random() * 6) + 1;
   //console.log("Il tuo numero è " + mioNumero);
 
   pcNumero = Math.floor( Math.random() * 6) + 1;
-  
-  console.log("Il del pc è " + pcNumero);
+  //console.log("Il del pc è " + pcNumero);
 
 
-  //Dadi per l'utente
+  //Dadi per l'utente e pc
   if (mioNumero == 1){
     dicePlayer = '<i class="fas fa-dice-one"></i>';
-  }
-  
-  if (mioNumero == 2){
+  } else if (mioNumero == 2){
     dicePlayer = '<i class="fas fa-dice-two"></i>';
-  }
-  
-  if (mioNumero == 3){
+  } else  if (mioNumero == 3){
     dicePlayer = '<i class="fas fa-dice-three"></i>';
-  }
-  
-  if (mioNumero == 4){
+  } else if (mioNumero == 4){
     dicePlayer = '<i class="fas fa-dice-four"></i>';
-  }
-  if (mioNumero == 5){
+  } else if (mioNumero == 5){
     dicePlayer = '<i class="fas fa-dice-five"></i>';
-  }
-  if (mioNumero == 6){
+  } else if (mioNumero == 6){
     dicePlayer = '<i class="fas fa-dice-six"></i>';
   }
   
   if ((pcNumero) == 1){
     diceComputer = '<i class="fas fa-dice-one"></i>';
-  }
-  
-  if (pcNumero == 2){
+  } else if (pcNumero == 2){
     diceComputer = '<i class="fas fa-dice-two"></i>';
-  }
-  
-  if (pcNumero == 3){
+  } else if (pcNumero == 3){
     diceComputer = '<i class="fas fa-dice-three"></i>';
-  }
-  
-  if (pcNumero == 4){
+  } else if (pcNumero == 4){
     diceComputer = '<i class="fas fa-dice-four"></i>';
-  }
-  if (pcNumero == 5){
+  } else if (pcNumero == 5){
     diceComputer = '<i class="fas fa-dice-five"></i>';
-  }
-  if (pcNumero == 6){
+  } else if (pcNumero == 6){
     diceComputer = '<i class="fas fa-dice-six"></i>';
   }
 
