@@ -85,6 +85,8 @@ bottoneGioca.addEventListener("click",
   if (boolean == true){
     //email trovata
     email.className = "hidden";
+    check.className = "hidden"
+    play.className = "hidden"
     dadi.className = "show";
   } else {
     //email non trovata
