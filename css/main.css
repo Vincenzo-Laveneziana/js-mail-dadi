@@ -31,6 +31,15 @@ main{
   align-items: center;
 }
 
+.hidden{
+  opacity: 0;
+
+}
+.show{
+  opacity: 1;
+}
+
+
 
 
 /* header */
@@ -44,14 +53,50 @@ main{
 }
 
 /* Main */
-
 .container{
   width: 500px;
   height: 500px;
   background: red;
   flex-direction: column;
+  position: relative;
 }
 
-.email{
- 
+.container h1{
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  border: 1px solid black;
+  padding: 5px 15px;
 }
+
+#email {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+#email .col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  text-align: center;
+
+}
+
+#email .col input{
+  padding: 10px;
+  width: 75%;
+}
+
+.row{
+  position: absolute;
+  bottom: 30px;
+}
+
+
+
+

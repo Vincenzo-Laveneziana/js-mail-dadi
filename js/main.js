@@ -6,30 +6,47 @@
 */
 
 //Dichiarazione Variabili
-var listMail = ["michele@boolean.careers", "fabio@boolean.careers", "roberto@boolean.careers", "paolo@boolean.careers", "lorenzo@boolean.careers", "vincenzo@boolean.careers"];
+var listMail = ["michele@boolean.careers", "fabio@boolean.careers", "roberto@boolean.careers", "paolo@boolean.careers", "lorenzo@boolean.careers", "vincenzo@boolean.careers" ,"ciao"];
 var boolean = false;
 
-//chiedo all'utente la sua email
-var yourMail= prompt("Inserisci il tuo indirizzo email").toLowerCase();
 
+bottoneCerca.addEventListener("click",
+  function(){
+    //chiedo all'utente la sua email
+    var yourMail= document.getElementById("nome").value;
+    var yourMail = yourMail.toLowerCase();
+    console.log(yourMail);
 
-//controllo
-for ( var i = 0; i < listMail.length; i++){
-  var item = listMail[i]
+    //controllo
+    for ( var i = 0; i < listMail.length; i++){
+      var item = listMail[i]
 
-  if (yourMail == item){
-    boolean = true;
+      if (yourMail == item){
+        boolean = true;
+      }
+    };
+
+    //stampa un messaggio
+    if (boolean == true){
+      //email trovata
+      document.getElementById("check").innerHTML = "L'utente " + yourMail + " è stato trovato";
+      console.log("L'utente " + yourMail + " è stato trovato");
+      bottoneCerca.className = "hidden"
+    } else {
+      //email non trovata
+      document.getElementById("check").innerHTML = "Attenzione l'utente " + yourMail + " non è stato trovato";
+      console.log("Attenzione l'utente " + yourMail + " non è stato trovato, reinserisci l'email");
+    };
+
+    check.className = "show"
+    play.className = "show"
   }
-};
+)
 
-//stampa un messaggio
-if (boolean == true){
-  //email trovata
-  console.log("L'utente " + yourMail + " è stato trovato");
-} else {
-  //email non trovata
-  console.log("L'utente " + yourMail + " non è stato trovato");
-};
+
+
+
+
 
 
 
@@ -44,18 +61,38 @@ var mioNumero;
 var pcNumero;
 
 
-//Genero numero random da 1 a 6
-mioNumero = Math.floor( Math.random() * 6) + 1;
-console.log("Il tuo numero è " + mioNumero);
+bottoneGioca.addEventListener("click",
+  function(){
+    //Genero numero random da 1 a 6
+  mioNumero = Math.floor( Math.random() * 6) + 1;
+  console.log("Il tuo numero è " + mioNumero);
 
-pcNumero = Math.floor( Math.random() * 6) + 1;
-console.log("Il del pc è " + pcNumero);
+  pcNumero = Math.floor( Math.random() * 6) + 1;
+  console.log("Il del pc è " + pcNumero);
 
-//Stabilisco il vincitore
-if ( mioNumero > pcNumero){
-  console.log("Bravissimo sei un campione nato");
-} else if (pcNumero > mioNumero) {
-  console.log("Riprova sicuramente il pc ha barato");
-} else if ( mioNumero == pcNumero){
-  console.log("Pareggio c'eri quasi");
-}
+  //Stabilisco il vincitore
+  if ( mioNumero > pcNumero){
+    console.log("Bravissimo sei un campione nato");
+  } else if (pcNumero > mioNumero) {
+    console.log("Riprova sicuramente il pc ha barato");
+  } else if ( mioNumero == pcNumero){
+    console.log("Pareggio c'eri quasi");
+  }
+  
+
+  //stampa un messaggio
+  if (boolean == true){
+    //email trovata
+    email.className = "hidden"
+  } else {
+    //email non trovata
+    alert("Per giocare devi inserire l'indirizzo email")
+  };
+
+  
+  
+
+  }
+)
+
+
