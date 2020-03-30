@@ -58,7 +58,7 @@ main{
 
 /* header */
 #head_nav {
-  background: #110506;
+  background:#050102;
   min-height: 95px;
 }
 
@@ -124,13 +124,15 @@ main{
   text-align: center;
 }
 
-
-
 .meplay,
 .pcplay{
   text-align: center;
   margin: 0 5px;
 
+}
+
+#dadi h4{
+  font-size: 50px;
 }
 
 

@@ -55,18 +55,68 @@ bottoneCerca.addEventListener("click",
 //Dichiarazione variabili
 var mioNumero;
 var pcNumero;
+var dicePlayer;
+var diceComputer;
 
 
 bottoneGioca.addEventListener("click",
   function(){
     //Genero numero random da 1 a 6
   mioNumero = Math.floor( Math.random() * 6) + 1;
-  document.getElementById("mioRisultato").innerHTML = mioNumero;
-  console.log("Il tuo numero è " + mioNumero);
+  //console.log("Il tuo numero è " + mioNumero);
 
   pcNumero = Math.floor( Math.random() * 6) + 1;
-  document.getElementById("pcRisultato").innerHTML = pcNumero;
+  
   console.log("Il del pc è " + pcNumero);
+
+
+  //Dadi per l'utente
+  if (mioNumero == 1){
+    dicePlayer = '<i class="fas fa-dice-one"></i>';
+  }
+  
+  if (mioNumero == 2){
+    dicePlayer = '<i class="fas fa-dice-two"></i>';
+  }
+  
+  if (mioNumero == 3){
+    dicePlayer = '<i class="fas fa-dice-three"></i>';
+  }
+  
+  if (mioNumero == 4){
+    dicePlayer = '<i class="fas fa-dice-four"></i>';
+  }
+  if (mioNumero == 5){
+    dicePlayer = '<i class="fas fa-dice-five"></i>';
+  }
+  if (mioNumero == 6){
+    dicePlayer = '<i class="fas fa-dice-six"></i>';
+  }
+  
+  if ((pcNumero) == 1){
+    diceComputer = '<i class="fas fa-dice-one"></i>';
+  }
+  
+  if (pcNumero == 2){
+    diceComputer = '<i class="fas fa-dice-two"></i>';
+  }
+  
+  if (pcNumero == 3){
+    diceComputer = '<i class="fas fa-dice-three"></i>';
+  }
+  
+  if (pcNumero == 4){
+    diceComputer = '<i class="fas fa-dice-four"></i>';
+  }
+  if (pcNumero == 5){
+    diceComputer = '<i class="fas fa-dice-five"></i>';
+  }
+  if (pcNumero == 6){
+    diceComputer = '<i class="fas fa-dice-six"></i>';
+  }
+
+  document.getElementById("mioRisultato").innerHTML = dicePlayer;
+  document.getElementById("pcRisultato").innerHTML = diceComputer;
 
   //Stabilisco il vincitore
   if ( mioNumero > pcNumero){
@@ -95,6 +145,8 @@ bottoneGioca.addEventListener("click",
   
   }
 )
+
+
 
 bottoneAnnulla.addEventListener("click",
   function(){
