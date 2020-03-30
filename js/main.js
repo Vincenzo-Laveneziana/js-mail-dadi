@@ -61,17 +61,22 @@ bottoneGioca.addEventListener("click",
   function(){
     //Genero numero random da 1 a 6
   mioNumero = Math.floor( Math.random() * 6) + 1;
+  document.getElementById("mioRisultato").innerHTML = mioNumero;
   console.log("Il tuo numero è " + mioNumero);
 
   pcNumero = Math.floor( Math.random() * 6) + 1;
+  document.getElementById("pcRisultato").innerHTML = pcNumero;
   console.log("Il del pc è " + pcNumero);
 
   //Stabilisco il vincitore
   if ( mioNumero > pcNumero){
+    document.getElementById("result").innerHTML = "Bravissimo sei un campione nato";
     console.log("Bravissimo sei un campione nato");
   } else if (pcNumero > mioNumero) {
+    document.getElementById("result").innerHTML = "Riprova sicuramente il pc ha barato";
     console.log("Riprova sicuramente il pc ha barato");
   } else if ( mioNumero == pcNumero){
+    document.getElementById("result").innerHTML = "Pareggio c'eri quasi";
     console.log("Pareggio c'eri quasi");
   }
   
@@ -80,11 +85,12 @@ bottoneGioca.addEventListener("click",
   if (boolean == true){
     //email trovata
     email.className = "hidden";
+    dadi.className = "show";
   } else {
     //email non trovata
     alert("Per giocare devi inserire e cercare l'indirizzo email");
   };
-  dadi.className = "show";
+  
   }
 )
 
