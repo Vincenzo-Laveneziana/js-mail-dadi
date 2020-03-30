@@ -38,3 +38,24 @@ if (boolean == true){
  * generare un numero random da 1  a 6, sia per il giocatore sia per il computer
  * Stabilire il vincitore, in base a chi fa il punteggio più alto
 */
+
+//Dichiarazione variabili
+var mioNumero;
+var pcNumero;
+
+
+//Genero numero random da 1 a 6
+mioNumero = Math.floor( Math.random() * 6) + 1;
+console.log("Il tuo numero è " + mioNumero);
+
+pcNumero = Math.floor( Math.random() * 6) + 1;
+console.log("Il del pc è " + pcNumero);
+
+//Stabilisco il vincitore
+if ( mioNumero > pcNumero){
+  console.log("Bravissimo sei un campione nato");
+} else if (pcNumero > mioNumero) {
+  console.log("Riprova sicuramente il pc ha barato");
+} else if ( mioNumero == pcNumero){
+  console.log("Pareggio c'eri quasi");
+}
